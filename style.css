@@ -125,3 +125,108 @@ body {
 .hero-button:hover {
     background-color: rgba(100, 255, 218, 0.1); /* Efek highlight saat disentuh mouse */
 }
+
+/* Tambahkan di bawah kode yang sudah ada di style.css */
+
+/* Styling untuk Judul Section yang Seragam */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    color: var(--primary-text-color);
+    margin-bottom: 40px;
+    
+    /* Trik untuk membuat judul dengan garis di sebelahnya */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 200px; /* Panjang garis */
+    background-color: var(--secondary-text-color);
+    opacity: 0.3;
+}
+
+/* Tambahkan di bawah kode sebelumnya */
+
+/* Styling untuk About Section */
+.about-section {
+    padding: 60px 0; /* Memberi jarak vertikal */
+}
+
+/* Kita tidak perlu styling .about-content secara khusus saat ini */
+/* karena isinya hanya paragraf yang mengalir ke bawah */
+
+.about-content p {
+    color: var(--secondary-text-color);
+    margin-bottom: 15px; /* Jarak antar paragraf */
+    max-width: 650px; /* Batasi lebar paragraf agar mudah dibaca */
+}
+
+.skills-list {
+    list-style: none; /* Hapus bullet point bawaan */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px)); /* Membuat 2 kolom list */
+    gap: 10px; /* Jarak antar item skill */
+    margin-top: 20px;
+}
+
+.skills-list li {
+    color: var(--secondary-text-color);
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace; /* Font khas untuk coding */
+    font-size: 14px;
+    position: relative;
+    padding-left: 20px; /* Ruang untuk panah */
+}
+
+/* Trik membuat panah kecil sebelum item skill */
+.skills-list li::before {
+    content: '▹'; /* Karakter panah */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-color);
+}
+
+/* Tambahkan di bawah kode sebelumnya */
+
+/* Styling untuk Projects Section */
+.projects-section {
+    padding: 60px 0;
+}
+
+.projects-grid {
+    display: grid;
+    /* Grid yang responsif secara otomatis */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #112240; /* Warna biru navy sedikit lebih terang */
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Mengubah cursor menjadi tangan saat hover */
+}
+
+.project-card:hover {
+    transform: translateY(-7px); /* Efek kartu terangkat saat disentuh mouse */
+    box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.7);
+}
+
+.project-card h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-text-color);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: var(--secondary-text-color);
+    font-size: 16px;
+}
