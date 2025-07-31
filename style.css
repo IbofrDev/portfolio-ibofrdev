@@ -329,5 +329,55 @@ body {
     .navbar-menu {
         display: none;
     }
+
+    /* Tambahkan di dalam blok @media (max-width: 768px) */
+
+    /* Tampilkan ikon hamburger yang tadi kita sembunyikan di desktop */
+    .hamburger-menu {
+        display: block; /* Tampilkan ikonnya */
+        cursor: pointer;
+    }
+
+    .hamburger-menu .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--primary-text-color);
+    }
+
+    /* Ini adalah style untuk menu saat dalam keadaan aktif/terbuka */
+    .navbar-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed; /* Membuat menu menutupi seluruh layar */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-color);
+        z-index: 100; /* Memastikan menu ada di lapisan paling atas */
+        gap: 50px;
+    }
+
+    /* Animasi ikon hamburger menjadi 'X' saat menu aktif */
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
+.hamburger-menu {
+    display: none;
+}
