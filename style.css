@@ -21,3 +21,107 @@ body {
     color: var(--primary-text-color);
     font-family: var(--font-body);
 }
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased; /* Membuat font lebih halus di beberapa browser */
+}
+
+/* Class Container untuk pembungkus konten */
+.container {
+    width: 90%;
+    max-width: 1100px; /* Lebar maksimal konten */
+    margin: 0 auto; /* Trik untuk membuat konten ke tengah */
+}
+
+/* Tambahkan di bawah kode sebelumnya */
+
+/* Styling untuk Navbar */
+.navbar {
+    display: flex; /* Menggunakan Flexbox untuk alignment */
+    justify-content: space-between; /* Mendorong item ke ujung kiri dan kanan */
+    align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+    padding: 20px 0; /* Memberi jarak atas-bawah */
+}
+
+.navbar-logo a {
+    color: var(--accent-color); /* Warna mint dari variabel */
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none; /* Menghilangkan garis bawah link */
+}
+
+.navbar-menu ul {
+    list-style: none; /* Menghilangkan bulatan/angka dari list */
+    display: flex;
+    gap: 30px; /* Memberi jarak antar menu */
+}
+
+.navbar-menu ul li a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 16px;
+    transition: color 0.3s ease; /* Animasi perubahan warna saat hover */
+}
+
+.navbar-menu ul li a:hover {
+    color: var(--accent-color); /* Warna berubah jadi mint saat disentuh mouse */
+}
+
+/* Tambahkan di bawah kode sebelumnya */
+
+/* Styling untuk Hero Section */
+.hero {
+    min-height: 80vh; /* Tinggi minimal 80% dari tinggi layar */
+    display: flex;
+    flex-direction: column; /* Menyusun item ke bawah */
+    justify-content: center; /* Konten berada di tengah secara vertikal */
+    padding: 40px 0;
+}
+
+.hero-intro {
+    color: var(--accent-color);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-headline-1 {
+    font-family: var(--font-heading);
+    font-size: 70px;
+    line-height: 1.1;
+    color: var(--primary-text-color);
+    margin-bottom: 10px;
+}
+
+.hero-headline-2 {
+    font-family: var(--font-heading);
+    font-size: 60px;
+    line-height: 1.1;
+    color: var(--secondary-text-color);
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--secondary-text-color);
+    max-width: 550px; /* Agar teks tidak terlalu lebar */
+    margin-bottom: 50px;
+}
+
+.hero-button {
+    color: var(--accent-color);
+    background-color: transparent; /* Latar belakang transparan */
+    border: 1px solid var(--accent-color); /* Garis pinggir warna mint */
+    padding: 15px 30px; /* Jarak dalam tombol */
+    border-radius: 4px; /* Sudut sedikit melengkung */
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: rgba(100, 255, 218, 0.1); /* Efek highlight saat disentuh mouse */
+}
