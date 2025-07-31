@@ -230,3 +230,104 @@ body {
     color: var(--secondary-text-color);
     font-size: 16px;
 }
+
+/* Tambahkan di bawah kode yang sudah ada di style.css */
+
+/* Styling untuk Contact Section */
+.contact-section {
+    padding: 100px 0; /* Jarak vertikal yang besar agar terasa lega */
+    text-align: center; /* Semua teks di bagian ini akan rata tengah */
+}
+
+.contact-headline {
+    font-family: var(--font-heading);
+    font-size: 50px;
+    color: var(--primary-text-color);
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    color: var(--secondary-text-color);
+    max-width: 600px;
+    margin: 0 auto 50px auto; /* Atas 0, Kanan-Kiri auto, Bawah 50px */
+}
+
+.contact-button {
+    color: var(--accent-color);
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    padding: 18px 35px; /* Sedikit lebih besar dari tombol hero */
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Tambahkan di bawah kode sebelumnya */
+
+/* Styling untuk Footer */
+.footer {
+    padding: 25px 0;
+    text-align: center;
+    border-top: 1px solid rgba(136, 146, 176, 0.2); /* Garis pemisah tipis */
+}
+
+.footer p {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Tambahkan di paling bawah file style.css */
+
+/* ============================================= */
+/* MEDIA QUERIES (RESPONSIVE)      */
+/* ============================================= */
+
+@media (max-width: 768px) {
+    /* Style ini hanya aktif jika lebar layar 768px atau kurang */
+
+    /* Kecilkan ukuran font judul agar tidak terlalu besar di HP */
+    .hero-headline-1 {
+        font-size: 40px;
+    }
+
+    .hero-headline-2 {
+        font-size: 30px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+    
+    /* Hilangkan garis di sebelah judul section di mobile */
+    .section-title::after {
+        display: none;
+    }
+
+    /* Ubah layout skill list dari 2 kolom menjadi 1 kolom */
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sembunyikan menu desktop, nanti kita ganti dengan ikon hamburger */
+    .navbar-menu {
+        display: none;
+    }
+}
+
